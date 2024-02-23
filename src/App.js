@@ -10,6 +10,7 @@ import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import Fragment from "./components/Fragment";
 import Container from "./components/Container";
+import ExecuteFuncion from "./components/ExecuteFuncion";
 
 function App() {
   const userName = "Rodrigo Pereira";
@@ -20,6 +21,10 @@ function App() {
     { id: 4, brand: "Ford", km: 0, color: "Vermelho" },
     { id: 5, brand: "Fiat", km: 50000, color: "Preto" },
   ];
+
+  function ShowMessage(){
+    console.log("Evento do componente pai!")
+  }
 
   return (
     <div className="App">
@@ -39,14 +44,14 @@ function App() {
       {/*Props*/}
       <ShowUserName name={userName} />
       {/*Destructiring*/}
-      <CarDetails brand="Honda" km={50000} color="Vermelho" />
+      <CarDetails  brand="Honda" km={50000} color="Vermelho" />
       {/*Reaproveitando */}
-      <CarDetails brand="Forkd" km={0} color="Azul" />
-      <CarDetails brand="Fiat" km={4500} color="Branco" />
+      <CarDetails  brand="Forkd" km={0} color="Azul" />
+      <CarDetails  brand="Fiat" km={4500} color="Branco" />
       {/*Loop em Array de Objetos */}
       <h3>Fazendo um loop em Array de Objetos</h3>
       {cars.map((car) => (
-        <CarDetails brand={car.brand} km={car.km} color={car.color} />
+        <CarDetails  key={car.id} brand={car.brand} km={car.km} color={car.color} />
       ))}
       {/*Fragments */}
       <h2>Component criado utilizando fragment</h2>
@@ -55,8 +60,8 @@ function App() {
       <Container anotherValue="Valor informado através de props" >
         <p>Este é o conteúdo do container.</p>
       </Container>
-
-
+      {/*Executar função */}  
+      <ExecuteFuncion MyFunction={ShowMessage} />
     </div>
   );
 }
