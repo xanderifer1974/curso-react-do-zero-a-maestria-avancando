@@ -8,6 +8,7 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
+import Fragment from "./components/Fragment";
 
 function App() {
   const userName = "Rodrigo Pereira";
@@ -46,6 +47,9 @@ function App() {
       {cars.map((car) => (
         <CarDetails brand={car.brand} km={car.km} color={car.color} />
       ))}
+      {/*Fragments */}
+      <h2>Component criado utilizando fragment</h2>
+      <Fragment/>
     </div>
   );
 }
