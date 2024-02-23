@@ -7,8 +7,11 @@ import City from './asset/city.png'
 import ManageData from './components/ManageData';
 import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
+import ShowUserName from './components/ShowUserName';
 
 function App() {
+
+  const userName = "Rodrigo Pereira";
   return (
     <div className="App">
      <h1>Avancando no React</h1>
@@ -22,6 +25,7 @@ function App() {
      <ManageData/>
      <ListRender/>
      <ConditionalRender/>
+     <ShowUserName name={userName}/>
     </div>
   );
 }
