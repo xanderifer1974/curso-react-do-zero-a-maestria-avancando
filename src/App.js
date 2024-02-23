@@ -30,7 +30,10 @@ function App() {
      {/*Props*/}
      <ShowUserName name={userName}/>
      {/*Destructiring*/}
-     <CarDetails brand="Honda" km={50000} color="vermelho"/>
+     <CarDetails brand="Honda" km={50000} color="Vermelho"/>
+     {/*Reaproveitando */}
+     <CarDetails brand="Forkd" km={0} color="Azul"/>
+     <CarDetails brand="Fiat" km={4500} color="Branco"/>
     </div>
   );
 }
